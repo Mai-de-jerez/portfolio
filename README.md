@@ -46,11 +46,11 @@ Antes de comenzar, asegúrate de tener **Python 3.x** y **Django** instalados. T
 1. **Clona el repositorio**:
    Para clonar este repositorio en tu máquina local, abre tu terminal o Git Bash y ejecuta el siguiente comando:
 
-   ```bash
-   git clone https://github.com/Mai-de-jerez/portfolio.git
-   ```
+ ```bash
+ git clone https://github.com/Mai-de-jerez/portfolio.git
+ ```
 
-2 **Accede al directorio del proyecto**:
+2. **Accede al directorio del proyecto**:
   Después de clonar el repositorio, navega al directorio del proyecto con el siguiente comando:
 
 ```bash
