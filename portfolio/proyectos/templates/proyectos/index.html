@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!-- Banner -->
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1>Hola, mi nombre es Mai</h1>
+            </header>
+            <div class="content">
+                <p>Bienvenidos a mi portfolio, mi rincón favorito.<br />
+                En él guardo todos mis proyectos web.</p>
+                <ul class="actions">
+                    <li><a href="#one" class="button next scrolly">Comenzar</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+            <section id="one" class="tiles">
+                {% for proyecto in proyectos %}
+                    <article>
+                        <span class="image">
+                            <img src="{{proyecto.image.url}}" alt="" />
+                        </span>
+                        <header class="major">
+                            <h3><a href="{{proyecto.link}}" class="link">{{proyecto.title}}</a></h3>
+                            <p>{{proyecto.description}}</p>
+                        </header>
+                    </article> 
+                {% endfor %} 
+                {% if proyectos|length|divisibleby:2 == False %}
+                <article>
+                    <span class="image">
+                        <img src="{% static 'core/images/pic05.jpg' %}" alt="" />
+                    </span>
+                    <header class="major">
+                        <h3>No hay más proyectos</h3>
+                        <p>Soy una loseta que está aquí puesta para que cuando el número de proyectos sea impar, no quede este hueco vacío.</p>
+                    </header>
+                </article>
+                {% endif %}
+            </section>
+
+        <!-- Two -->
+            <section id="two">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Trayectoria</h2>
+                    </header>
+                    <p>Mi nombre es María del Carmen Martín Rodríguez y estoy interesada en la colaboración con proyectos de diseño web, análisis de datos y Data Science. Descubrí este mundo por casualidad y desde entonces no he parado de estudiar para convertirme en la mejor científica-analista de datos de la historia.</p>
+                    <ul class="actions">
+                        <li><a href="{% url 'landing' %}" class="button next">Saber más</a></li>
+                    </ul>
+                </div>
+            </section>
+
+    </div>           
+{% endblock %}

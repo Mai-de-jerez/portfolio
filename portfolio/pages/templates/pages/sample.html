@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Main -->
+    <div id="main" class="alt">
+      <!-- One -->
+        <section id="one">
+            <div class="inner">
+                <div class="box">
+                    <header class="major">
+                        <h1>{{page.title}}</h1>
+                    </header>
+                    <p>{{page.content|safe}}</p>
+                        {% if user.is_authenticated %}
+                            <p><a href="{% url 'admin:pages_page_change' page.id %}">Editar</a></p>
+                        {% endif %}
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+{% block contact_section %}
+{% endblock contact_section %}

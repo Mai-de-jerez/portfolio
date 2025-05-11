@@ -1,0 +1,9 @@
+he creado un superuser
+nombre: profesor
+clave: 12345profesor
+
+y un usuario de prueba:
+nombre: test
+clave: 12345clave
+
+si necesitas algo mas para ejecutar el proyecto dimelo, soy amateur y no tengo mucha idea se me pueden estar pasando cosas por alto.

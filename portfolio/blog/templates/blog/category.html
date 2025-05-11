@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Main -->
+<div id="main" class="alt">
+
+    <!-- One -->
+    {% for post in category.get_posts.all %}
+        <section id="one">
+            <div class="inner">
+                <div class=box>
+                    <header>
+                        <h2 style="text-align:center;"><span>{{post.title}}</span></h2>
+                    </header>
+                    <p style= "text-align:center;"><b>{{post.published|date:"SHORT_DATE_FORMAT"}}</b></p>
+                    <span class="image main"><img src="{{post.image.url}}" alt="" /></span>
+                    <p>{{post.content|linebreaks}}</p>   
+                    <p style="text-align:center;">
+                        <span>Publicado por <em><b>{{post.author}}</b></em> en 
+                            <em>
+                                {% for category in post.categories.all %}
+                                    <a href="{% url 'category' category.id %}">{{category.name}}</a>{% if not forloop.last %},{% endif %}
+                                {% endfor %}
+                            </em> 
+                        </span>       
+                    </p>                        
+                </div>               
+            </div>
+        </section>
+    {% endfor %}
+        <!-- Two -->
+        <section id="three">
+            <div class="inner">
+                <header class="major">
+                    <h2>Gracias por tu visita</h2>
+                </header>
+                <p>Muchas gracias por visitar mi página y espero que te haya gustado mi portfolio. Puedes dejarme un mensaje si quieres en la sección de contacto. ¡Saludos forastero!🤠</p>
+                <ul class="actions">
+                    <li><a href="{% url 'index' %}" class="button next">Volver</a></li>
+                </ul>
+            </div>
+        </section>
+
+</div>
+{% endblock %}
