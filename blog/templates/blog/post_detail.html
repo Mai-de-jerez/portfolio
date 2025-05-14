@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}  
+
+{% block content %}
+<!-- Main -->
+<div id="main" class="alt">
+    <div class="inner">
+        {% if request.GET.ok %}
+          <p><b style="color:cyan">Página editada correctamente.</b></p>
+        {% endif %}
+        <header class="major">
+            <h2>{{post.title}}</h2>
+        </header> 
+        <p><b>{{post.published|date:"SHORT_DATE_FORMAT"}}</b></p>
+
+            {% if post.image %}
+              <span class="image main">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%;">
+              </span>
+            {% endif %}
+          <div>
+            {{ post.content|safe }}
+          </div>
+            <p style="text-align:center;">
+                <span>Publicado por <em><b>{{post.author}}</b></em> en 
+                    <em>
+                        {% for category in post.categories.all %}
+                            <a href="{% url 'blog:posts_by_category' category.id %}">{{category.name}}</a>{% if not forloop.last %},{% endif %}
+                        {% endfor %}
+                    </em> 
+                </span> 
+            </p>   
+              {% if request.user == post.author %}
+                <a href="{% url 'blog:post_update' post.pk %}" class="btn btn-warning">Modificar</a>  |
+                <a href="{% url 'blog:post_delete' post.pk %}" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que quieres eliminar esta entrada?');">Eliminar</a>  |
+              {% endif %}
+                <a href="{% url 'blog:post_list' %}" class="btn btn-secondary">Volver al blog</a>
+    </div>
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,16 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="inner">
+  <div class="box" style="text-align: center;">
+    <h2>¿Estás seguro de que quieres eliminar esta entrada?</h2>
+    <p><strong>{{ object.title }}</strong></p>
+
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="button primary" style="background-color: red;">Sí, eliminar</button>
+      <a href="{% url 'blog:post_detail' object.pk %}" class="button">Cancelar</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

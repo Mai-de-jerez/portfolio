@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Main -->
+<div id="main" class="alt">
+    {% for post in post_list %}
+            <div class="inner">
+                <header class="major">
+                    <h2>{{post.title}}</h2>
+                </header>                    
+                <p><b>{{post.published|date:"SHORT_DATE_FORMAT"}}</b></p>
+                {% if post.image %}
+                    <span class="image main"><img src="{{post.image.url}}" alt="" /></span>
+                {% endif %}
+                <p>{{post.content|safe|truncatewords:70}}</p>  
+                <a href="{% url 'blog:post_detail' post.pk %}" class="btn btn-primary">Leer más</a> 
+                <p style="text-align:center;">
+                        <span>Publicado por <em><b>{{post.author}}</b></em> en 
+                            <em>
+                                {% for category in post.categories.all %}
+                                    <a href="{% url 'blog:posts_by_category' category.id %}">{{category.name}}</a>{% if not forloop.last %},{% endif %}
+                                {% endfor %}
+                            </em> 
+                        </span> 
+                </p>                                  
+            </div>  
+    {% endfor %}
+        <!-- Botones Acciones -->
+    <div class="inner">
+        <ul class="actions">
+            <li><a href="{% url 'blog:create' %}" class="button fit">Crear nuevo post</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+
+
+      

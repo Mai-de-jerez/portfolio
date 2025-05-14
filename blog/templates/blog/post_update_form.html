@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+<!--Main-->
+    <div id="main" class="alt">
+        <section id="one">
+            <div class="inner">
+                <header class='major'>
+                <h2>Editar post</h2>
+                </header>
+                <form action="" method="post" enctype="multipart/form-data">
+                    {{ form.media }}
+                    {% csrf_token %}
+                       {{ form.as_p }}  
+                        <div style='display:flex; gap:20px;'>                  
+                            <input type="submit" value="Guardar cambios" class="button"/>
+                            <a href="{% url 'blog:post_detail' post.pk %}" class="button primary">Cancelar</a>
+                        </div>                        
+                </form>       
+            </div>
+        </section>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Main -->
+<div id="main" class="alt">
+    <h2 id="category_title">Categoría: {{ category_list.name }}</h2>
+    <!-- One -->
+    {% for post in category_posts %}
+            <div class="inner">
+                    <header class="major">
+                       <h2>{{post.title}}</h2>
+                    </header>  
+                    <p><b>{{post.published|date:"SHORT_DATE_FORMAT"}}</b></p>
+                    {% if post.image %}
+                        <span class="image main"><img src="{{post.image.url}}" alt="" /></span>
+                    {% endif %}
+                    <p>{{post.content|safe}}</p>   
+                    <p style="text-align:center;">
+                        <span>Publicado por <em><b>{{post.author}}</b></em> en 
+                            <em>
+                                {% for category in post.categories.all %}
+                                    <a href="{% url 'blog:posts_by_category' category.id %}">{{category.name}}</a>{% if not forloop.last %},{% endif %}
+                                {% endfor %}
+                            </em> 
+                        </span>       
+                    </p>
+                    {% if request.user == post.author %}
+                      <a href="{% url 'blog:post_update' post.pk %}" class="btn btn-warning">Modificar</a>  |
+                    {% endif %}
+                    <a href="{% url 'blog:post_list' %}" class="btn btn-secondary">Volver al blog</a>                                     
+            </div>
+        {% empty %}
+        <p>No hay posts disponibles para esta categoría.</p>
+    {% endfor %}
+</div>
+{% endblock %}
