@@ -14,6 +14,9 @@ Este es un proyecto personal desarrollado con **Django**, donde muestro mis habi
 
 - **Social**: 
   - Esta app facilita la integración de los **iconos de redes sociales**, permitiendo que los usuarios puedan interactuar con plataformas externas (Facebook, Twitter, LinkedIn, etc.) a través de enlaces en el sitio web.
+ 
+- **Pages**: 
+- Esta aplicación está diseñada para manejar **páginas estáticas,** como el Aviso Legal, Política de Privacidad, Términos y Condiciones, etc. En lugar de crear cada una de estas páginas manualmente como vistas separadas, las agruparé dentro de una app que maneje las vistas y las URLs de estas páginas estáticas.
   
 - **Contact**: 
   - Maneja la funcionalidad del formulario de contacto. Permite a los visitantes enviar mensajes desde el sitio web, almacenando los datos de contacto y notificando a los administradores sobre nuevos mensajes a través de notificaciones o correos electrónicos.
