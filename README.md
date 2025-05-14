@@ -6,10 +6,9 @@ Este es un proyecto personal desarrollado con **Django**, donde muestro mis habi
 
 ### Descripción de las aplicaciones en el proyecto:
 
-- **Core**: La aplicación base que maneja elementos fundamentales y la estructura general del proyecto, proporcionando configuraciones comunes y recursos compartidos.
+- **Core**: es la aplicación base que maneja elementos fundamentales y la estructura general del proyecto, proporcionando configuraciones comunes y recursos compartidos.
 
-- **Blog**: 
-  -Esta aplicación gestiona la visualización y administración de las entradas de blog. Incluye un conjunto completo de funcionalidades **CRUD** (Crear, Listar, Modificar, Eliminar) que permiten gestionar las publicaciones de manera eficiente. 
+- **Blog**: esta aplicación gestiona la visualización y administración de las entradas de blog. Incluye un conjunto completo de funcionalidades **CRUD** (Crear, Listar, Modificar, Eliminar) que permiten gestionar las publicaciones de manera eficiente. 
 
   - **Crear**: Permite a los usuarios crear nuevas publicaciones con información como el título, contenido, fecha de publicación, etc.
   - **Listar**: Muestra todas las entradas del blog de forma ordenada, generalmente con la opción de paginación.
@@ -18,22 +17,20 @@ Este es un proyecto personal desarrollado con **Django**, donde muestro mis habi
 
 La aplicación define modelos que almacenan la información sobre cada publicación y gestiona las vistas y plantillas para mostrar las entradas de manera ordenada y atractiva. Además, proporciona interfaces de administración para gestionar el contenido desde el backend.
 
-- **Social**: 
-  - Esta app facilita la integración de los **iconos de redes sociales**, permitiendo que los usuarios puedan interactuar con plataformas externas (Facebook, Twitter, LinkedIn, etc.) a través de enlaces en el sitio web.
+- **Social**: Esta app facilita la integración de los **iconos de redes sociales**, permitiendo que los usuarios puedan interactuar con plataformas externas (Facebook, Twitter, LinkedIn, etc.) a través de enlaces en el sitio web.
  
-- **Pages**: 
-- Esta aplicación está diseñada para manejar **páginas estáticas,** como el Aviso Legal, Política de Privacidad, Términos y Condiciones, etc. En lugar de crear cada una de estas páginas manualmente como vistas separadas, las agruparé dentro de una app que maneje las vistas y las URLs de estas páginas estáticas.
+- **Pages**: Esta aplicación está diseñada para manejar **páginas estáticas,** como el Aviso Legal, Política de Privacidad, Términos y Condiciones, etc. En lugar de crear cada una de estas páginas manualmente como vistas separadas, las agruparé dentro de una app que maneje las vistas y las URLs de estas páginas estáticas.
   
-- **Contact**: 
-  - Maneja la funcionalidad del formulario de contacto. Permite a los visitantes enviar mensajes desde el sitio web, almacenando los datos de contacto y notificando a los administradores sobre nuevos mensajes a través de notificaciones o correos electrónicos.
+- **Contact**: Maneja la funcionalidad del formulario de contacto. Permite a los visitantes enviar mensajes desde el sitio web, almacenando los datos de contacto y notificando a los administradores sobre nuevos mensajes a través de notificaciones o correos electrónicos.
 
-- **Proyectos**: 
-  - Contiene un modelo para almacenar información sobre los proyectos en los que has trabajado o estás trabajando. Los modelos incluyen campos como **título**, **descripción**, **fecha de creación** y cualquier otra información relevante que desees mostrar sobre los proyectos.
-  - También se encarga de mostrar esta información en el sitio web, permitiendo a los usuarios ver tus trabajos anteriores de manera organizada.
+- **Proyectos**:  Contiene un modelo para almacenar información sobre los proyectos en los que has trabajado o estás trabajando. Los modelos incluyen campos como:
+  - **título**
+  - **descripción**
+  - **fecha de creación**
+  - **imágenes**
+También se encarga de mostrar esta información en el sitio web, permitiendo a los usuarios ver tus trabajos anteriores de manera organizada.
 
-- **Curriculum**: 
-  - Esta app se utiliza para **mostrar tu currículum** o **CV** en línea. Presenta **entradas** con **texto**, **fotos**, **títulos** y enlaces hacia tu **currículum en PDF**, **GitHub**, **LinkedIn** y otras plataformas relevantes.
-  - La app permite estructurar y organizar tu información profesional de manera atractiva, incluyendo tu experiencia laboral, formación académica, habilidades y logros, todo con enlaces directos a tus perfiles y trabajos destacados.
+- **Curriculum**: Esta app se utiliza para **mostrar tu currículum** o **CV** en línea. Presenta **entradas** con **texto**, **fotos**, **títulos** y enlaces hacia tu **currículum en PDF**, **GitHub**, **LinkedIn** y otras plataformas relevantes. La app permite estructurar y organizar tu información profesional de manera atractiva, incluyendo tu experiencia laboral, formación académica, habilidades y logros, todo con enlaces directos a tus perfiles y trabajos destacados.
 
 
 ## Características destacadas:
