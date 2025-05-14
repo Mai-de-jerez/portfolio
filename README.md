@@ -23,12 +23,7 @@ La aplicación define modelos que almacenan la información sobre cada publicaci
   
 - **Contact**: Maneja la funcionalidad del formulario de contacto. Permite a los visitantes enviar mensajes desde el sitio web, almacenando los datos de contacto y notificando a los administradores sobre nuevos mensajes a través de notificaciones o correos electrónicos.
 
-- **Proyectos**:  Contiene un modelo para almacenar información sobre los proyectos en los que has trabajado o estás trabajando. Los modelos incluyen campos como:
-  - **título**
-  - **descripción**
-  - **fecha de creación**
-  - **imágenes**
-También se encarga de mostrar esta información en el sitio web, permitiendo a los usuarios ver tus trabajos anteriores de manera organizada.
+- **Proyectos**:  Contiene un modelo para almacenar información sobre los proyectos en los que has trabajado o estás trabajando. Los modelos incluyen campos como: **título**, **descripción**, **fecha de creación**, **imágenes**. También se encarga de mostrar esta información en el sitio web, permitiendo a los usuarios ver tus trabajos anteriores de manera organizada.
 
 - **Curriculum**: Esta app se utiliza para **mostrar tu currículum** o **CV** en línea. Presenta **entradas** con **texto**, **fotos**, **títulos** y enlaces hacia tu **currículum en PDF**, **GitHub**, **LinkedIn** y otras plataformas relevantes. La app permite estructurar y organizar tu información profesional de manera atractiva, incluyendo tu experiencia laboral, formación académica, habilidades y logros, todo con enlaces directos a tus perfiles y trabajos destacados.
 
