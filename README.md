@@ -9,12 +9,12 @@ Este es un proyecto personal desarrollado con **Django**, donde muestro mis habi
 - **Core**: La aplicación base que maneja elementos fundamentales y la estructura general del proyecto, proporcionando configuraciones comunes y recursos compartidos.
 
 - **Blog**: 
-  - Esta aplicación gestiona la visualización y administración de las entradas de blog. Incluye un conjunto completo de funcionalidades **CRUD** (Crear, Listar, Modificar, Eliminar) que permiten gestionar las publicaciones de manera eficiente. 
+  -Esta aplicación gestiona la visualización y administración de las entradas de blog. Incluye un conjunto completo de funcionalidades **CRUD** (Crear, Listar, Modificar, Eliminar) que permiten gestionar las publicaciones de manera eficiente. 
 
-- **Crear**: Permite a los usuarios crear nuevas publicaciones con información como el título, contenido, fecha de publicación, etc.
-- **Listar**: Muestra todas las entradas del blog de forma ordenada, generalmente con la opción de paginación.
-- **Modificar**: Permite editar y actualizar cualquier entrada existente del blog.
-- **Eliminar**: Ofrece la opción de eliminar publicaciones de forma sencilla.
+  - **Crear**: Permite a los usuarios crear nuevas publicaciones con información como el título, contenido, fecha de publicación, etc.
+  - **Listar**: Muestra todas las entradas del blog de forma ordenada, generalmente con la opción de paginación.
+  - **Modificar**: Permite editar y actualizar cualquier entrada existente del blog.
+  - **Eliminar**: Ofrece la opción de eliminar publicaciones de forma sencilla.
 
 La aplicación define modelos que almacenan la información sobre cada publicación y gestiona las vistas y plantillas para mostrar las entradas de manera ordenada y atractiva. Además, proporciona interfaces de administración para gestionar el contenido desde el backend.
 
