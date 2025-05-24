@@ -107,3 +107,6 @@ python manage.py runserver
 ```
 
 Esto levantará el servidor en `http://127.0.0.1:8000/`. Puedes acceder a tu portfolio y también al panel de administración de Django en `http://127.0.0.1:8000/admin/` utilizando el superusuario que creaste.
+
+## Autor
+Este proyecto sí es mío 100%, y en él pude poner en práctica todo lo aprendido en el curso de ecperto en Django de Héctor Costa.
